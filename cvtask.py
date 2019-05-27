@@ -11,7 +11,7 @@ Original file is located at
 import tensorflow as tf
 import keras
 from keras.datasets import mnist
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 from PIL import Image
 import numpy
 from keras.models import Sequential
@@ -176,13 +176,13 @@ print("CNN Error: %.2f%%" % (100-scores[1]*100))
 # list all data in history
 print(history.history.keys())
 # summarize history for loss
-plt.plot(history.history['loss'])
-plt.plot(history.history['val_loss'])
-plt.title('model loss')
-plt.ylabel('loss')
-plt.xlabel('epoch')
-plt.legend(['train', 'test'], loc='upper left')
-plt.show()
+pyplot.plot(history.history['loss'])
+pyplot.plot(history.history['val_loss'])
+pyplot.title('model loss')
+pyplot.ylabel('loss')
+pyplot.xlabel('epoch')
+pyplot.legend(['train', 'test'], loc='upper left')
+pyplot.show()
 
 # 6. Print Accuracy
 print(scores[1])
